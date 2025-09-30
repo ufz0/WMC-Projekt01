@@ -1,0 +1,1 @@
+A simple chat-app that also allows for a blackjack game
