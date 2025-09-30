@@ -6,8 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <input>
-    <button onclick="">Send</button>
+    <input id="input">
+    <button onclick="sendMessage(document.getElementById('input').value)">Send</button>
 </body>
 <script>
     function sendMessage(text){

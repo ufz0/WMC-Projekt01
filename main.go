@@ -10,6 +10,10 @@ func main(){
 	gin.SetMode(gin.ReleaseMode)
 	r := gin.Default()
 
+	r.GET("/styles.css", func (c *gin.Context)  {
+		c.File("./public/styles.css")
+	})
+
 	r.GET("/", func(c *gin.Context){
 		c.File("./public/index.html")
 	})
