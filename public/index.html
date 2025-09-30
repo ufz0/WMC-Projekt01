@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlackChat</title>
+  <link rel="icon" type="image/png" href="chat_icon.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Si sharp!</h1>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <img src="Logo.png" class="sidebar-logo" alt="Logo">
+      </div>
+      <div class="contacts">
+        <div class="contact active" onclick="openChat('Alice')">Alice</div>
+        <div class="contact" onclick="openChat('Bob')">Bob</div>
+        <div class="contact" onclick="openChat('Charlie')">Charlie</div>
+      </div>
+    </div>
+
+    <!-- Chat Area -->
+    <div class="chat-area">
+      <div class="chat-header" id="chatHeader">Alice</div>
+      <div class="chat-messages" id="chatMessages"></div>
+      <div class="chat-input">
+        <input type="text" id="chatInput" placeholder="Type a message..." onkeydown="if(event.key==='Enter') sendMessage()">
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
